@@ -12,7 +12,7 @@ export const getCaseBySlug = slug => {
       'fields.slug': slug
     }).then(({ items }) => {
       if (items.length < 1) reject(`Case with slug "${slug}" could not be found`)
-      if (items.length > 1) console.warn(`Duplicate entries for case with slug: ${slug} found`)
+      if (items.length > 1) console.warn(`Duplicate entries for case with "slug: ${slug}" found`)
       resolve(items[0].fields)
     }).catch(err => reject(err))
   })
