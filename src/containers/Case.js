@@ -5,7 +5,7 @@ import { getCaseBySlug } from '../client'
 class Case extends Component {
   state = {
     isLoading: true,
-    data: {}
+    data: null
   }
 
   componentDidMount() {
