@@ -1,20 +1,21 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import { getCaseBySlug } from '../client'
+import ApiClient from '../api/client'
 
 class Case extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
+      client: new ApiClient(),
       data: null,
       isLoading: true
     }
   }
 
   componentDidMount() {
-    getCaseBySlug(this.props.match.params.slug)
+    this.state.client.getCaseBySlug(this.props.match.params.slug)
       .then(data => {
         this.setState({ data, isLoading: false })
       })

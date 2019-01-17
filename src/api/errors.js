@@ -1,0 +1,1 @@
+export const CASE_WITH_SLUG_NOT_FOUND = 'A case with the specified slug could not be found'
