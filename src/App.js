@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-
 import Case from './containers/Case'
 import Main from './containers/Main'
 

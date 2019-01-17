@@ -1,17 +1,22 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 import { getCaseBySlug } from '../client'
 
 class Case extends Component {
-  state = {
-    isLoading: true,
-    data: null
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      data: null,
+      isLoading: true
+    }
   }
 
   componentDidMount() {
     getCaseBySlug(this.props.match.params.slug)
       .then(data => {
-        this.setState({ isLoading: false, data })
+        this.setState({ data, isLoading: false })
       })
       .catch(err => {
         console.error(err)
@@ -32,6 +37,10 @@ class Case extends Component {
       </div>
     )
   }
+}
+
+Case.propTypes = {
+  match: PropTypes.object.isRequired
 }
 
 export default Case
