@@ -31,6 +31,46 @@ class ApiClient {
       .catch(err => reject(Error(err)))
     })
   }
+
+  /**
+   * Fetches the latest cases
+   * @param {Int} count the number of cases to fetch
+   * @returns {Array} returns an array of cases
+   */
+  getLatestCases(count = 1) {
+    return new Promise((resolve, reject) => {
+      /* eslint camelcase: off */
+      this.client.getEntries({
+        content_type: 'case',
+        limit: count,
+        order: '-sys.createdAt'
+      })
+      .then(({ items }) => {
+        resolve(items.map(el => el.fields))
+      })
+      .catch(err => reject(Error(err)))
+    })
+  }
+
+  /**
+   * Fetches all data for the main view
+   * @returns {Object} returns the data needed to render the main view
+   */
+  getMainData() {
+    return new Promise((resolve, reject) => {
+      const mainDataPromise = this.client.getEntries({
+        content_type: 'main',
+        limit: 1
+      })
+      Promise.all([this.getLatestCases(3), mainDataPromise])
+        .then(res => {
+          const cases = res[0],
+           main = res[1].items[0].fields
+          resolve({ cases, main })
+        })
+        .catch(err => reject(err))
+    })
+  }
 }
 
 export default ApiClient
