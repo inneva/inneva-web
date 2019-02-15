@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@contentful/rich-text-html-renderer": "^12.1.2",
     "babel-loader": "^8.0.5",
     "contentful": "^7.1.0",
     "prop-types": "^15.6.2",

@@ -80,7 +80,7 @@ class Main extends React.Component {
           cases={cases}
           setRef={this.casesRef}
         />
-        <Footer bcolor="#383838" />
+        <Footer />
       </div>
     )
   }

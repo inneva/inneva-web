@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <Router>
         <Switch>
-          <Route exact path="/case/:slug" component={Case} />
+          <Route exact path="/case/:slug" component={() => <Case />} />
           <Route path="/" component={Main} />
         </Switch>
       </Router>

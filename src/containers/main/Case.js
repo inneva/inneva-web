@@ -100,14 +100,14 @@ const Case = ({ index, data, history }) => {
               <Img
                 alt={data.header.fields.description}
                 src={data.header.fields.file.url}
-                onClick={() => history.push(`/cases/${data.slug}`)}
+                onClick={() => history.push(`/case/${data.slug}`)}
               />
             </Half>
           <Half>
             <CaseText>Case<Ribbon /></CaseText>
             <Title>{data.title}</Title>
             <Slug>{data.excerpt}</Slug>
-            <ReadMore to={`/cases/${data.slug}`}>Läs mer</ReadMore>
+            <ReadMore to={`/case/${data.slug}`}>Läs mer</ReadMore>
           </Half>
         </Div>
       </BlockWrapper>
@@ -122,14 +122,14 @@ const Case = ({ index, data, history }) => {
           <Title style={{ marginRight: '15%', textAlign: 'right' }}>{data.title}</Title>
           <Slug style={{ marginRight: '15%', textAlign: 'right' }}>{data.excerpt}</Slug>
           <ReadMore
-            to={`/cases/${data.slug}`}
+            to={`/case/${data.slug}`}
             style={{ marginRight: '15%', right: '0' }}>Läs mer</ReadMore>
         </Half>
         <Half>
           <Img
             alt={data.header.fields.description}
             src={data.header.fields.file.url}
-            onClick={() => history.push(`/cases/${data.slug}`)}
+            onClick={() => history.push(`/case/${data.slug}`)}
           />
         </Half>
       </Div>

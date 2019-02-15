@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import { createClient } from 'contentful'
 
 import App from './App'
+import './index.css'
 
 // store contentful client in window
 window.client = createClient({
