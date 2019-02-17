@@ -40,6 +40,10 @@ const Footer = () => {
     :hover {
       background-color: #3d5a80;
     }
+
+    @media screen and (max-width: 580px) {
+      font-size: 1.2rem;
+    }
   `
 
   return (

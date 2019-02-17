@@ -12,6 +12,10 @@ const Case = ({ index, data, history }) => {
     height: 100%;
     width: 50%;
     position: relative;
+    
+    @media screen and (max-width: 580px) {
+      width: 100%;
+    }
   `,
 
    Img = styled.img`
@@ -27,6 +31,10 @@ const Case = ({ index, data, history }) => {
       cursor: pointer;
       transform: translate(-50%, -50%) scale(1.04);
     }
+
+    @media screen and (max-width: 580px) {
+      height: 100%;
+    }
   `,
 
    Div = styled.div`
@@ -35,6 +43,22 @@ const Case = ({ index, data, history }) => {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 580px) {
+      flex-direction: column;
+    }
+  `,
+
+  DivOdd = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 580px) {
+      flex-direction: column-reverse;
+    }
   `,
 
    CaseText = styled.h3`
@@ -52,6 +76,19 @@ const Case = ({ index, data, history }) => {
         margin-top: -2.9rem;
       }
     }
+
+    @media screen and (max-width: 580px) {
+      font-size: 2rem;
+      margin-top: 3%; 
+      margin-bottom: 1.2rem;
+
+      :hover {
+        * {
+          height: initial;
+          margin-top: initial;
+        }
+      }
+    }
   `,
 
    Ribbon = styled.div`
@@ -61,14 +98,22 @@ const Case = ({ index, data, history }) => {
     margin-left: auto;
     margin-right: auto;
     margin-top: -1.2rem;
+
+    @media screen and (max-width: 580px) {
+      width: 4.5rem;
+    }
   `,
 
    Title = styled.h3`
-    font-size: 4rem;
-    font-weight: 400;
+    font-size: 3rem;
+    font-weight: 300;
     margin-top: unset;
     margin-left: 15%;
     margin-bottom: 1rem;
+
+    @media screen and (max-width: 580px) {
+      font-size: 2rem;
+    }
   `,
 
    Slug = styled.p`
@@ -77,6 +122,10 @@ const Case = ({ index, data, history }) => {
     margin-top: unset;
     margin-left: 15%;
     margin-right: 15%;
+
+    @media screen and (max-width: 580px) {
+      font-size: 1rem;
+    }
   `,
 
    ReadMore = styled(Link)`
@@ -89,6 +138,10 @@ const Case = ({ index, data, history }) => {
 
     :hover {
       cursor: pointer;
+    }
+
+    @media screen and (max-width: 580px) {
+      font-size: 1.1rem;
     }
   `
 
@@ -116,7 +169,7 @@ const Case = ({ index, data, history }) => {
 
   return (
     <BlockWrapper height="65vh">
-      <Div>
+      <DivOdd>
         <Half>
           <CaseText style={{ marginLeft: '65%' }}>Case<Ribbon /></CaseText>
           <Title style={{ marginRight: '15%', textAlign: 'right' }}>{data.title}</Title>
@@ -132,7 +185,7 @@ const Case = ({ index, data, history }) => {
             onClick={() => history.push(`/case/${data.slug}`)}
           />
         </Half>
-      </Div>
+      </DivOdd>
     </BlockWrapper>
   )
 }

@@ -8,6 +8,10 @@ const BlockWrapper = ({ height, bcolor, children }) => {
   width: 100vw;
   height: ${height || '80vh'};
   background-color: ${bcolor};
+
+  @media screen and (max-width: 580px) {
+    height: ${height || '120vh'};
+  }
   `
 
   return (

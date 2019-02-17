@@ -16,16 +16,39 @@ const Summary = ({ header, field1, field2, field3, setRef }) => {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+
+    @media screen and (max-width: 580px) {
+      padding-top: 3rem;
+      flex-direction: column;
+    }
   `,
 
    Text = styled.p`
     font-weight: 300;
     font-size: 1.7rem;
     line-height: 1.7rem;
+
+    @media screen and (max-width: 580px) {
+      font-size: 1rem;
+      line-height: 1.4rem;
+      text-align: center;
+    }
   `,
 
    Box = styled.div`
     width: 15%;
+
+    @media screen and (max-width: 580px) {
+      width: 70%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      & img {
+        width: 35%;
+      }
+    }
   `,
    H = styled.h3`
     margin: 3rem auto;
@@ -34,14 +57,19 @@ const Summary = ({ header, field1, field2, field3, setRef }) => {
     text-align: center;
     font-size: 3rem;
     font-weight: 400;
+
+    @media screen and (max-width: 580px) {
+      margin: 1rem auto;
+      font-size: 2rem;
+    }
     `,
   Ribbon = styled.div`
     background-color: #ee6c4c;
-    width: 6rem;
+    width: 4rem;
     height: 0.25rem;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 0.7rem;
+    margin-top: 0.4rem;
   `
 
   return (

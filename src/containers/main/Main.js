@@ -45,7 +45,7 @@ class Main extends React.Component {
       target = this.casesRef.current.offsetTop
     }
 
-    window.scrollTo(0, target)
+    window.scrollTo({ top: target, left: 0, behavior: 'smooth' })
   }
 
   render() {

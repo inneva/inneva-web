@@ -37,12 +37,37 @@ const Bar = styled.div`
     &.scrolledDown {
       color: black;
     }
+
+    @media screen and (max-width: 580px) {
+      padding: 1rem;
+      right: unset;
+      font-size: 2rem;
+      display: flex;
+      flex-direction: column;
+      top: 0;
+      width: 100%;
+
+      &.closed {
+        transform: translateY(-5rem);
+        opacity: 0;
+      }
+
+      &.scrolledDown {
+        background-color: white;
+        box-shadow: 0 0px 12px 0px black;
+      }
+    }
   `
 
   const Category = styled.p`
     
     :hover {
       cursor: pointer;
+    }
+
+    @media screen and (max-width: 580px) {
+      font-weight: 300;
+      margin: 0.6rem 0;
     }
   `
 
@@ -58,6 +83,10 @@ const Bar = styled.div`
 
     :hover {
       cursor: pointer;
+    }
+
+    @media screen and (max-width: 580px) {
+      width: 28%;
     }
   `
 
@@ -106,6 +135,15 @@ const Bar = styled.div`
       background-color: white;
       &:after,:before {
         border-color: black;
+      }
+    }
+
+    @media screen and (max-width: 580px) {
+      &:before {
+        width: 35%;
+      }
+      &:after {
+        width: 35%;
       }
     }
   `
