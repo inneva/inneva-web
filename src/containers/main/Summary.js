@@ -11,6 +11,7 @@ import like from './icons/like.svg'
 const Summary = ({ header, field1, field2, field3, setRef }) => {
 
   const Div = styled.div`
+    padding-top: 6vh;
     height: 100%;
     width: 100%;
     display: flex;
@@ -57,6 +58,10 @@ const Summary = ({ header, field1, field2, field3, setRef }) => {
     text-align: center;
     font-size: 3rem;
     font-weight: 400;
+
+    @media screen and (max-width: 800px) {
+      margin: 1rem auto;
+    }
 
     @media screen and (max-width: 580px) {
       margin: 1rem auto;

@@ -5,19 +5,20 @@ import styled from 'styled-components'
 import BlockWrapper from '../../components/BlockWrapper'
 
 const Div = styled.div`
-  height: 100%;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 
   @media screen and (max-width: 580px) {
+    margin-top: -4rem;
+    height: 92%;
     flex-direction: column;
   }
     `,
 
   Canvas = styled.div`
-  width: 22vw;
+  width: 32vw;
   height: 22vw;
   margin: 0 5vw;
   
@@ -28,7 +29,9 @@ const Div = styled.div`
   `,
 
   Img = styled.img`
-  width: 100%;
+  margin: 0 auto;
+  display: block;
+  width: 80%;
   border-radius: 50%;
 
   @media screen and (max-width: 580px) {
@@ -39,16 +42,16 @@ const Div = styled.div`
   `,
 
   H = styled.h3`
-  margin: 3rem auto;
+  margin: 0 auto;
+  padding: 2rem 0;
   width: 100%;
-  position: absolute;
   text-align: center;
   color: white;
   font-size: 3rem;
   font-weight: 400;
 
   @media screen and (max-width: 580px) {
-    margin: 1rem auto;
+    margin: 0 auto;
     font-size: 2rem;
   }
   `,

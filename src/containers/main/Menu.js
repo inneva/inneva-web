@@ -46,15 +46,16 @@ const Bar = styled.div`
       flex-direction: column;
       top: 0;
       width: 100%;
+      background-color: white;
+      box-shadow: 0 0px 12px 0px black;
+      color: black;
 
       &.closed {
+        background-color: unset;
+        box-shadow: none;
         transform: translateY(-5rem);
         opacity: 0;
-      }
-
-      &.scrolledDown {
-        background-color: white;
-        box-shadow: 0 0px 12px 0px black;
+        color: white;
       }
     }
   `
@@ -85,6 +86,10 @@ const Bar = styled.div`
       cursor: pointer;
     }
 
+    @media screen and (max-width: 900px) {
+      width: 18%;
+    }
+
     @media screen and (max-width: 580px) {
       width: 28%;
     }
@@ -104,6 +109,7 @@ const Bar = styled.div`
       border-top: 4px solid white;
       border-bottom: 4px solid white;
       width: 40%;
+      max-width: 90px;
       position: absolute;
       height: 11px;
       transition-duration: 0.2s;
@@ -122,6 +128,7 @@ const Bar = styled.div`
       border-bottom: 4px solid white;
       position: absolute;
       width: 40%;
+      max-width: 90px;
       height: 31px;
       transition-duration: 0.2s;
     }
@@ -139,6 +146,18 @@ const Bar = styled.div`
     }
 
     @media screen and (max-width: 580px) {
+
+      &.X {
+        background-color: unset;
+      }
+
+      &.X:before {
+        border-color: black;
+      }
+
+      &.X:after {
+        border-color: black;
+      }
       &:before {
         width: 35%;
       }
