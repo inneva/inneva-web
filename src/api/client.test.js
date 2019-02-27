@@ -5,7 +5,7 @@ import { CASE_WITH_SLUG_NOT_FOUND } from './errors'
 import Client from './client'
 
 let client = {}
-const existingSlug = 'testcase'
+const existingSlug = 'atritec'
 
 beforeAll(() => {
   const contentfulClient = createClient({

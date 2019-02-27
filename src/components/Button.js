@@ -9,7 +9,7 @@ const StyledButton = styled.button`
   border: 2px solid ${STYLES.LIGHT_BLUE};
   color: ${STYLES.LIGHT_BLUE}
   padding: 15px 25px;
-  font-size: 1.3em;
+  font-size: 1.1em;
   cursor: pointer;
 
   -webkit-transition: all 0.3s; /* Safari */

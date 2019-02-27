@@ -7,6 +7,7 @@ import People from './People'
 import Cases from './Cases'
 import Footer from './Footer'
 import ApiClient from '../../api/client'
+import Spinner from '../../components/Spinner'
 
 class Main extends React.Component {
   constructor(props) {
@@ -45,12 +46,15 @@ class Main extends React.Component {
       target = this.casesRef.current.offsetTop
     }
 
-    window.scrollTo({ top: target, left: 0, behavior: 'smooth' })
+    window.scrollTo({
+      behavior: 'smooth',
+      left: 0,
+      top: target
+    })
   }
 
   render() {
-    // TODO add spinner when loading, exists on feature/case branch
-    if (this.state.isLoading) return null
+    if (this.state.isLoading) return <Spinner />
 
     // TODO better error message if data cannot be fetched for some reason
     if (!this.state.isLoading && !this.state.data) return <h1>Something went wrong</h1>

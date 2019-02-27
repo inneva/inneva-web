@@ -76,11 +76,26 @@ const Div = styled.div`
     margin: 0.5rem;  
   }
   `,
+  Email = styled.a`
+  color: white;
+  font-weight: 300;
+  line-height: 1.7rem;
+  font-size: 1.7rem;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+
+  @media screen and (max-width: 580px) {
+    font-size: 1rem;
+    width: 70vw;
+    display: block;
+    margin: 0 auto;
+  }`,
   Info = styled.p`
   color: white;
   font-weight: 300;
-  line-height: 1.4rem;
-  font-size: 1.4rem;
+  line-height: 1.6rem;
+  font-size: 1.6rem;
 
   @media screen and (max-width: 580px) {
     font-size: 1rem;
@@ -94,6 +109,7 @@ const Div = styled.div`
 class People extends React.Component {
   render() {
     const { header, employees, setRef } = this.props
+    console.log(employees)
 
     return (
       <div ref={setRef}>
@@ -108,6 +124,7 @@ class People extends React.Component {
                 alt={e.image.fields.description}
               />
               <Name>{e.name}</Name>
+              <Email href={`mailto:${e.email}`}>{e.email}</Email>
               <Info>{e.description}</Info>
             </Canvas>)}
           </Div>

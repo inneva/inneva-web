@@ -36,7 +36,7 @@ const ContentWrapper = styled.div`
   margin-bottom: 50px;
   padding: 0 25px;
   ${STYLES.mediaTemplates.desktop`padding: 0;`}
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 `
 
 const Title = styled.h1`
