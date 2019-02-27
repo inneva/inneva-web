@@ -1,4 +1,6 @@
 # inneva-web
+[![Build status](https://travis-ci.org/inneva/inneva-web.svg?branch=master)](https://travis-ci.org/travis-ci/travis-web)
+
 Source code for inneva.se, built using React with Contentful as backend.
 
 ## Setup local environment
@@ -22,4 +24,5 @@ git pull
 git checkout -b feature/<feature-name>
 ```
 
-After finishing all your work, submit a Pull Request to master and select a reviewer to look over the code.
+After finishing all your work, submit a Pull Request to master and select a reviewer to look over the code. Travis
+will build the project automatically whenever the PR is opened and will block merging until the PR is reviewed and all checks pass.
