@@ -109,7 +109,6 @@ const Div = styled.div`
 class People extends React.Component {
   render() {
     const { header, employees, setRef } = this.props
-    console.log(employees)
 
     return (
       <div ref={setRef}>
