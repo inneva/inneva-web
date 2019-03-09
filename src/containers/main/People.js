@@ -18,13 +18,13 @@ const Div = styled.div`
     `,
 
   Canvas = styled.div`
-  width: 32vw;
+  width: 22vw;
   height: 22vw;
   margin: 0 5vw;
   
   @media screen and (max-width: 580px) {
     width: 100vw;
-    height: 65vw;
+    height: 52vw;
   }
   `,
 
@@ -35,7 +35,7 @@ const Div = styled.div`
   border-radius: 50%;
 
   @media screen and (max-width: 580px) {
-    width: 45vw;
+    width: 35vw;
     display: block;
     margin: 0 auto;
   }
@@ -47,7 +47,7 @@ const Div = styled.div`
   width: 100%;
   text-align: center;
   color: white;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 400;
 
   @media screen and (max-width: 580px) {
@@ -67,20 +67,24 @@ const Div = styled.div`
   Name = styled.h4`
   text-align: center;
   color: white;
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin: 1rem;
   font-weight: 400;
-
+  width: 150%;
+  transform: translateX(-20%);
+  
   @media screen and (max-width: 580px) {
     font-size: 1.5rem;
-    margin: 0.5rem;  
+    margin: 0.5rem; 
+    width: unset;
+    transform: unset;
   }
   `,
   Email = styled.a`
   color: white;
   font-weight: 300;
-  line-height: 1.7rem;
-  font-size: 1.7rem;
+  line-height: 1.6rem;
+  font-size: 1.4rem;
   text-align: center;
   display: block;
   text-decoration: none;
@@ -95,7 +99,10 @@ const Div = styled.div`
   color: white;
   font-weight: 300;
   line-height: 1.6rem;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
+  width: 150%;
+  transform: translateX(-20%);
+  text-align: center;
 
   @media screen and (max-width: 580px) {
     font-size: 1rem;
@@ -103,6 +110,7 @@ const Div = styled.div`
     width: 70vw;
     display: block;
     margin: 0 auto;
+    transform: unset;
   }
   `
 

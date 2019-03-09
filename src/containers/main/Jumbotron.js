@@ -62,11 +62,16 @@ const Jumbotron = ({ tagline }) => {
     overflow: hidden;
     text-align: center;
     animation: ${appear} 1.2s ease-out;
+    max-width: 70vw;
+
+    @media screen and (max-width: 580px) {
+      max-width: 85vw;
+    }
   `,
 
    Ribbon = styled.div`
     background-color: #ee6c4c;
-    width: 40%;
+    width: 30%;
     height: 0.3rem;
     margin-left: auto;
     margin-right: auto;

@@ -26,8 +26,8 @@ const Summary = ({ header, field1, field2, field3, setRef }) => {
 
    Text = styled.p`
     font-weight: 300;
-    font-size: 1.7rem;
-    line-height: 1.7rem;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
 
     @media screen and (max-width: 580px) {
       font-size: 1rem;
@@ -38,6 +38,12 @@ const Summary = ({ header, field1, field2, field3, setRef }) => {
 
    Box = styled.div`
     width: 15%;
+
+    & img {
+      width: 80%;
+      display: block;
+      margin: auto;
+    }
 
     @media screen and (max-width: 580px) {
       width: 70%;
@@ -56,7 +62,7 @@ const Summary = ({ header, field1, field2, field3, setRef }) => {
     width: 100%;
     position: absolute;
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 400;
 
     @media screen and (max-width: 800px) {

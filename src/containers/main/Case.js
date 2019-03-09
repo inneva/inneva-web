@@ -62,20 +62,11 @@ const Case = ({ index, data, history }) => {
   `,
 
    CaseText = styled.h3`
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 400;
     margin-top: 8%;
     margin-left: 15%;
     width: 0;
-
-    :hover {
-      cursor: pointer;
-
-      * {
-        height: 2.3rem;
-        margin-top: -2.9rem;
-      }
-    }
 
     @media screen and (max-width: 580px) {
       font-size: 2rem;
@@ -93,11 +84,11 @@ const Case = ({ index, data, history }) => {
 
    Ribbon = styled.div`
     background-color: #ee6c4cb5;
-    width: 7rem;
+    width: 5.6rem;
     height: 0.6rem;
     margin-left: auto;
     margin-right: auto;
-    margin-top: -1.2rem;
+    margin-top: -1.1rem;
 
     @media screen and (max-width: 580px) {
       width: 4.5rem;
@@ -105,7 +96,7 @@ const Case = ({ index, data, history }) => {
   `,
 
    Title = styled.h3`
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 300;
     margin-top: unset;
     margin-left: 15%;
