@@ -107,7 +107,7 @@ const Div = styled.div`
   @media screen and (max-width: 580px) {
     font-size: 1rem;
     text-align: center;
-    width: 70vw;
+    width: 85vw;
     display: block;
     margin: 0 auto;
     transform: unset;
