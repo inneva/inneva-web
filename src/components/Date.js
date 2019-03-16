@@ -19,7 +19,6 @@ const Date = ({ date }) => {
 
   const parts = date.split('-')
   const [year, month] = parts
-  console.log(year, month)
 
   return (
     <Wrapper>

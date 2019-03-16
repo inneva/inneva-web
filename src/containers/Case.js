@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { withRouter } from 'react-router-dom'
+import { withRouter, Redirect } from 'react-router-dom'
 import styled from 'styled-components'
 
 import ApiClient from '../api/client'
@@ -37,14 +37,16 @@ const ContentWrapper = styled.div`
   padding: 0 25px;
   ${STYLES.mediaTemplates.desktop`padding: 0;`}
   font-size: 1.5rem;
+  font-weight: lighter;
 `
 
 const Title = styled.h1`
   font-size: 2.5rem;
   font-weight: lighter;
-  margin-top: ${STYLES.DEFAULT_MARGIN};
   text-transform: uppercase;
   text-align: center;
+  margin: 50px 0;
+  padding: 10px;
 `
 
 class Case extends Component {
@@ -74,6 +76,7 @@ class Case extends Component {
     const { caseLoading, data, imgLoading } = this.state
 
     if (caseLoading) return <Spinner />
+    if (!caseLoading && !data) return <Redirect to="/" />
 
     return (
       <Main style={{ opacity: imgLoading ? 0 : 1 }}>
